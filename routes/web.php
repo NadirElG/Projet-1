@@ -1,6 +1,11 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\CoachController;
+
+
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +34,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('admin/dashboard',[AdminController::class,'dashboard'])->middleware('auth')->name('admin.dashboard');
+Route::get('coach/dashboard',[CoachController::class,'dashboard'])->middleware('auth')->name('coach.dashboard');
