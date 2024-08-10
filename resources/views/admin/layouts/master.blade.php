@@ -18,6 +18,10 @@
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{asset('backend/assets/css/style.css')}}">
   <link rel="stylesheet" href="{{asset('backend/assets/css/components.css')}}">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
+
 <!-- Start GA -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
@@ -75,5 +79,14 @@
   <!-- Template JS File -->
   <script src="{{asset('backend/assets/js/scripts.js')}}"></script>
   <script src="{{asset('backend/assets/js/custom.js')}}"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+  <script>
+     @if($errors->any())
+        @foreach ($errors->all() as $error)
+             toastr.error("{{ $error }}")
+        @endforeach
+      @endif
+  </script>
 </body>
 </html>

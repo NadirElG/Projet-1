@@ -33,7 +33,7 @@ class UserSeeder extends Seeder
                 'username' => 'User Alpha',
                 'email' => 'user@sloteam.com',
                 'password' => bcrypt('password'),
-                'role' => 'admin'
+                'role' => 'user'
             ]
             ]);
     }
