@@ -9,6 +9,6 @@ class CoachController extends Controller
 {
     public function dashboard()
     {
-        return view('coach.dashboard');
+        return view('coach.dashboard.dashboard');
     }
 }
